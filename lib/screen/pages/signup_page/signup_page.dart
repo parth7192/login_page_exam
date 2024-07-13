@@ -22,7 +22,7 @@ class SignupPage extends StatelessWidget {
           children: [
             Container(
               // color: Colors.red,
-              padding: const EdgeInsets.only(left: 120, top: 70),
+              padding: const EdgeInsets.only(left: 35, top: 45),
               child: const Text(
                 'Create\nAccount',
                 style: TextStyle(color: Colors.white, fontSize: 50),
@@ -150,8 +150,13 @@ class SignupPage extends StatelessWidget {
                                 children: [
                                   TextButton(
                                     onPressed: () {
-                                      Navigator.pushNamed(
-                                          context, AppRoutes.signuppage);
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                          builder: (context) =>
+                                              const SignupPage(),
+                                        ),
+                                      );
                                     },
                                     style: const ButtonStyle(),
                                     child: const Text(

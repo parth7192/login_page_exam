@@ -41,6 +41,7 @@ dependencies:
   sqflite: ^2.3.3+1
   provider: ^6.1.2
   glassmorphism_ui: ^0.3.0
+  firebase_core: ^3.2.0
 
 dev_dependencies:
   flutter_test:

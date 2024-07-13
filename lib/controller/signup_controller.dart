@@ -1,6 +1,14 @@
-import 'package:get/get.dart';
-import 'package:get/get_state_manager/src/simple/get_controllers.dart';
+import 'package:firebase_core/firebase_core.dart';
 
-class SignupController extends GetxController {
-  RxBool isLogin = false.obs;
+class AuthSerivce {
+  AuthSerivce._();
+  static final AuthSerivce instance = AuthSerivce._();
+
+  Future<User?> anonymousLogIn() async {
+    UserCredential credential = await auth.signInAnonymously();
+
+    return credential.user;
+  }
+
+  FirebaseAuth auth = FirebaseAuth.instance;
 }
